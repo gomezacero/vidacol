@@ -1,0 +1,63 @@
+:root {
+  --primary: #004d40;
+  --secondary: #00796b;
+  --bg-color: #f8f9fa;
+  --text-main: #333333;
+  --text-muted: #666666;
+  --whatsapp: #25D366;
+  --whatsapp-secondary: #128C7E;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, sans-serif; color: var(--text-main); line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+a { text-decoration: none; color: inherit; }
+
+/* Header */
+.site-header { background: #fff; padding: 15px 0; border-bottom: 1px solid #eee; }
+.site-header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo-name { font-weight: bold; font-size: 1.2rem; color: var(--primary); display: block; }
+.logo-tag { font-size: 0.8rem; color: var(--text-muted); }
+.site-nav a { margin-left: 20px; font-weight: 500; }
+.site-nav a.active { color: var(--primary); }
+
+/* Hero */
+.hero { background: var(--primary); color: #fff; padding: 80px 0; text-align: center; }
+.hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+.hero-subtitle { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto; }
+.hero-actions { display: flex; gap: 15px; justify-content: center; }
+
+/* Buttons */
+.btn { display: inline-block; padding: 12px 24px; border-radius: 6px; font-weight: bold; text-align: center; }
+.btn-primary { background: #fff; color: var(--primary); }
+.btn-outline { border: 2px solid #fff; color: #fff; }
+.btn-whatsapp { background: var(--whatsapp); color: #fff; }
+.btn-whatsapp-secondary { background: var(--whatsapp-secondary); color: #fff; }
+
+/* Sections */
+section { padding: 60px 0; }
+.section-alt { background: var(--bg-color); }
+.section-header { text-align: center; margin-bottom: 40px; }
+.section-header h2 { color: var(--primary); font-size: 2rem; margin-bottom: 10px; }
+
+/* Grids */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.service-card { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.service-card h3 { color: var(--secondary); margin-bottom: 15px; }
+
+.about-grid, .contact-page-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start; }
+@media (max-width: 768px) {
+  .about-grid, .contact-page-grid { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; }
+}
+
+.about-content h2 { color: var(--primary); margin-bottom: 20px; }
+.about-content p { margin-bottom: 15px; }
+.about-card, .contact-box { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #eee; }
+.about-card h3, .contact-box h2 { color: var(--primary); margin-bottom: 20px; }
+.about-card p, .contact-box p { margin-bottom: 10px; }
+
+.contact-actions { display: flex; gap: 15px; flex-wrap: wrap; }
+
+/* Footer */
+.site-footer { background: #222; color: #fff; text-align: center; padding: 30px 0; font-size: 0.9rem; }
